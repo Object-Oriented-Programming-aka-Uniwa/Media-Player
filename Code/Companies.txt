@@ -1,0 +1,18 @@
+APPLICATION DEVELOPER
+---------------------
+Όνομα   : Bethesda
+Κωδικός : 1010
+Email   : bethesda@gmail.com
+
+APPLICATION DEVELOPER
+---------------------
+Όνομα   : Riot Games
+Κωδικός : 9776
+Email   : riotgames@gmail.com
+
+APPLICATION DEVELOPER
+---------------------
+Όνομα   : Microsoft
+Κωδικός : 8888
+Email   : microsoft@gmail.com
+
