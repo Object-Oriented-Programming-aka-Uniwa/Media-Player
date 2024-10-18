@@ -88,7 +88,7 @@ g++ -o Media-Player App.cpp AppConst.cpp AppData.cpp Game.cpp MediaPlayer.cpp ma
 
 ### 3. Run
 ```bash
-./MediaPlayer
+./Media-Player
 ```
 
 
@@ -182,5 +182,5 @@ g++ -o Media-Player App.cpp AppConst.cpp AppData.cpp Game.cpp MediaPlayer.cpp ma
 
 ### 3. Εκτέλεση
 ```bash
-./MediaPlayer
+./Media-Player
 ```
