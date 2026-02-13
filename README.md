@@ -1,79 +1,137 @@
-![Flag](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/255px-Flag_of_the_United_Kingdom_%281-2%29.svg.png)
+<p align="center">
+  <img src="https://www.especial.gr/wp-content/uploads/2019/03/panepisthmio-dut-attikhs.png" alt="UNIWA" width="150"/>
+</p>
 
-# Media Player App in C++
+<p align="center">
+  <strong>UNIVERSITY OF WEST ATTICA</strong><br>
+  SCHOOL OF ENGINEERING<br>
+  DEPARTMENT OF COMPUTER ENGINEERING AND INFORMATICS
+</p>
 
-For the requested assignment, click the link:  
-[Assignment](Assignment/)
+---
 
-For the source code, click the link:  
-[Code](Code/)
+<p align="center">
+  <strong>Object-Oriented Programming</strong>
+</p>
 
-For the Relationship between the Classes, click the link:
-[UML-Class-Diagram](UML-Class-Diagram/)
+<h1 align="center">
+  Media Player
+</h1>
+
+<p align="center">
+  <strong>Vasileios Evangelos Athanasiou</strong><br>
+  Student ID: 19390005
+</p>
+
+<p align="center">
+  <a href="https://github.com/Ath21" target="_blank">GitHub</a> ·
+  <a href="https://www.linkedin.com/in/vasilis-athanasiou-7036b53a4/" target="_blank">LinkedIn</a>
+</p>
+
+<hr/>
+
+<p align="center">
+  <strong>Supervision</strong>
+</p>
+
+<p align="center">
+  Supervisor: Cleo Sgouropoulou, Professor<br>
+</p>
+
+<p align="center">
+  <a href="https://ice.uniwa.gr/en/emd_person/georgios-meletiou/" target="_blank">UNIWA Profile</a> ·
+  <a href="https://www.linkedin.com/in/cleo-sgouropoulou-51683525/" target="_blank">LinkedIn</a>
+</p>
+
+
+<p align="center">
+  Co-supervisor: Georgios Meletiou, Laboratory Teaching Staff<br>
+</p>
+
+<p align="center">
+  <a href="https://ice.uniwa.gr/en/emd_person/georgios-meletiou/" target="_blank">UNIWA Profile</a>
+</p>
+
+</hr>
+
+<p align="center">
+  Athens, August 2022
+</p>
+
+---
+
+# Media Player Application in C++
+
+This repository contains a **C++ project** implementing a **Media Player management system**, demonstrating object-oriented programming concepts, class relationships, and exception handling.
+
+---
+
+## Table of Contents
+
+| Section | Folder/File | Description |
+|------:|-------------|-------------|
+| 1 | `assign/` | Assignment material for the Media Player workshop |
+| 1.1 | `assign/Examination ac.year 2021-22.png` | Exercise description in English |
+| 1.2 | `assign/Εξέταση ακ.έτους 2021-22.png` | Exercise description in Greek |
+| 2 | `src/` | Source code files for Media Player project |
+| 2.1 | `src/main.cpp` | Main C++ program |
+| 2.2 | `src/App.cpp` | Implementation of App class |
+| 2.3 | `src/App.h` | Header file for App class |
+| 2.4 | `src/AppConst.cpp` | Implementation of App constants |
+| 2.5 | `src/AppConst.h` | Header file for App constants |
+| 2.6 | `src/AppData.cpp` | Implementation of App data management |
+| 2.7 | `src/AppData.h` | Header file for App data management |
+| 2.8 | `src/Companies.txt` | Text file with company data |
+| 2.9 | `src/Game.cpp` | Implementation of Game class |
+| 2.10 | `src/Game.h` | Header file for Game class |
+| 2.11 | `src/MediaPlayer.cpp` | Implementation of MediaPlayer class |
+| 2.12 | `src/MediaPlayer.h` | Header file for MediaPlayer class |
+| 3 | `UML/` | UML diagrams for the Media Player project |
+| 3.1 | `UML/Classes.png` | Class diagram |
+| 4 | `README.md` | Repository overview and usage instructions |
 
 ---
 
 ## Project Overview
 
-This project involves the development of a **Application Management System** that manages the following entities:
+The system manages three primary entities:
 
-- **Game**: Includes details such as Code, Title, Game Category, whether it is Online, and Manufacturer.  
-- **Media Player Application**: Contains Code, Title, List of Supported Formats, and Manufacturer.  
-- **App Manufacturer**: Stores Code, Title, and Email information.
+1. **Game** – Attributes: Code, Title, Game Category, Online status, Manufacturer  
+2. **Media Player Application** – Attributes: Code, Title, Supported Formats, Manufacturer  
+3. **App Manufacturer** – Attributes: Code, Title, Email  
 
----
+Operations are performed via the `AppData` class, including:
 
-## Course Information
-- **Course**: [Objected Oriented Programming](https://ice.uniwa.gr/education/undergraduate/courses/object-oriented-programming/)
-- **Semester**: 2
-- **Program**: [UNIWA](https://www.uniwa.gr/)
-- **Department**: [Informatics and Computer Engineering](https://ice.uniwa.gr/)
-- **Instructor**: [Georgios Meletiou](https://ice.uniwa.gr/emd_person/17562/)
-
-## Student Information
-- **Name**: Athanasiou Vasileios Evangelos
-- **Student ID**: ice19390005
-- **Status**: Undergraduate
+- Maintaining a list of all applications  
+- Maintaining a list of manufacturers  
+- Inserting or deleting applications  
+- Adding manufacturers  
+- Printing application details using `<<` operator  
+- Writing manufacturer details to a file  
+- Querying Media Player apps that support a specific format  
 
 ---
 
-## Functionality
+## Key Features
 
-The system performs the following actions through an instance of the `AppData` class:
-
-- Maintains a single list of all system applications.
-- Maintains a list of app manufacturers.
-- Inserts or deletes applications in the application list.
-- Inserts a manufacturer into the list of manufacturers.
-- Outputs all application attributes to a human-readable format using the `<<` operator.
-- Writes the details of all app manufacturers to a file.
-- Returns a list of Media Player applications that support a specific format.
-
----
-
-## Specifications
-
-### Class Design:
-- Each class includes a `Code` field (as a string) and avoids using the `std::string` class for the Code field.
-- A constructor will be implemented for the `Media Player Application` class.
-- Only essential methods for system functionality will be implemented (setters/getters are omitted unless necessary).
-- **No public attributes** are used.
-- **Error handling** is managed through exceptions.
-
-### Expected Output:
-The program is designed to demonstrate the above functionality. It will interact with the user through keyboard inputs, but file reading from the keyboard is not necessary.
+- **Encapsulation:** All attributes are private; no public attributes  
+- **Class Design:** Each class has a `Code` field (string) without using `std::string` for the field  
+- **Constructors:** Implemented for `Media Player Application` class  
+- **Exception Handling:** Manages errors in operations and memory handling  
+- **Stream Output:** Overloaded `<<` operator outputs readable application information  
+- **Data Management:** Supports insertion, deletion, and querying of applications and manufacturers  
 
 ---
 
 ## Requirements
 
-- **C++ Compiler**: G++ or any standard C++ compiler.
-- **Operating System**: Linux/Windows/MacOS.
-- **Development Environment**: Command Line or IDE.
+- **C++ Compiler:** G++ or any standard C++ compiler  
+- **Operating System:** Linux / Windows / MacOS  
+- **Development Environment:** Command Line or IDE  
 
 ---
 
-## Installation and Usage
+## Installation & Usage
 
 ### 1. Clone the Repository
 ```bash
@@ -91,96 +149,8 @@ g++ -o Media-Player App.cpp AppConst.cpp AppData.cpp Game.cpp MediaPlayer.cpp ma
 ./Media-Player
 ```
 
-
-![Flag](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/255px-Flag_of_Greece.svg.png)
-
-# Εφαρμογή Media Player σε C++
-
-Για την εκφώνηση της εργασίας, κάντε κλικ στον σύνδεσμο:  
-[Εργασία](Assignment/)
-
-Για τον πηγαίο κώδικα, κάντε κλικ στον σύνδεσμο:  
-[Κώδικας](Code/)
-
-Για την Σχέση μεταξύ των Κλάσεων, κάντε κλικ στον σύνδεσμο:  
-[Διάγραμμα Κλάσεων UML](UML-Class-Diagram/)
-
 ---
 
-## Επισκόπηση Έργου
+## Conclusion
 
-Αυτό το έργο αφορά την ανάπτυξη ενός **Συστήματος Διαχείρισης Εφαρμογών**, το οποίο διαχειρίζεται τις παρακάτω οντότητες:
-
-- **Παιχνίδι**: Περιλαμβάνει λεπτομέρειες όπως Κωδικός, Τίτλος, Κατηγορία Παιχνιδιού, αν είναι Online, και Κατασκευαστής.  
-- **Εφαρμογή Media Player**: Περιέχει Κωδικό, Τίτλο, Λίστα Υποστηριζόμενων Μορφότυπων και Κατασκευαστή.  
-- **Κατασκευαστής Εφαρμογών**: Αποθηκεύει τον Κωδικό, τον Τίτλο και το Email του κατασκευαστή.
-
----
-
-## Πληροφορίες Μαθήματος
-- **Μάθημα**: Αντικειμενοστραφής Προγραμματισμός
-- **Εξάμηνο**: 2
-- **Πρόγραμμα**: [ΠΑΔΑ](https://www.uniwa.gr/)
-- **Τμήμα**: [Μηχανικών Πληροφορικής και Υπολογιστών Υπολογιστών](https://ice.uniwa.gr/)
-- **Καθηγητής**: [Γεώργιος Μελετίου](https://ice.uniwa.gr/emd_person/17562/)
-
-## Πληροφορίες Φοιτητή
-- **Όνομα**: Αθανάσιου Βασίλειος Ευάγγελος
-- **Αριθμός Φοιτητή**: ice19390005
-- **Κατάσταση**: Προπτυχιακός
-
----
-
-## Λειτουργικότητα
-
-Το σύστημα εκτελεί τις ακόλουθες ενέργειες μέσω μιας παρουσίας της κλάσης `AppData`:
-
-- Διατηρεί μια μοναδική λίστα με όλες τις εφαρμογές του συστήματος.
-- Διατηρεί μια λίστα κατασκευαστών εφαρμογών.
-- Εισάγει ή διαγράφει εφαρμογές από τη λίστα εφαρμογών.
-- Εισάγει έναν κατασκευαστή στη λίστα των κατασκευαστών.
-- Εκτυπώνει όλα τα χαρακτηριστικά των εφαρμογών σε ανθρώπινα αναγνώσιμη μορφή χρησιμοποιώντας τον τελεστή `<<`.
-- Γράφει τις λεπτομέρειες όλων των κατασκευαστών εφαρμογών σε ένα αρχείο.
-- Επιστρέφει μια λίστα με τις εφαρμογές Media Player που υποστηρίζουν έναν συγκεκριμένο μορφότυπο.
-
----
-
-## Προδιαγραφές
-
-### Σχεδίαση Κλάσεων:
-- Κάθε κλάση περιλαμβάνει ένα πεδίο `Κωδικός` (ως συμβολοσειρά) και αποφεύγεται η χρήση της κλάσης `std::string` για το πεδίο Κωδικός.
-- Ένας constructor θα υλοποιηθεί για την κλάση `Media Player Application`.
-- Μόνο οι απαραίτητες μέθοδοι για τη λειτουργικότητα του συστήματος θα υλοποιηθούν (τα setters/getters θα παραλειφθούν, εκτός αν είναι απαραίτητα).
-- **Δεν χρησιμοποιούνται δημόσια πεδία.**
-- **Η διαχείριση λαθών** γίνεται μέσω εξαιρέσεων.
-
-### Αναμενόμενη Έξοδος:
-Το πρόγραμμα είναι σχεδιασμένο να επιδεικνύει την παραπάνω λειτουργικότητα. Θα αλληλεπιδρά με τον χρήστη μέσω εισαγωγής από το πληκτρολόγιο, αλλά δεν είναι απαραίτητη η ανάγνωση αρχείων από το πληκτρολόγιο.
-
----
-
-## Απαιτήσεις
-
-- **Μεταγλωττιστής C++**: G++ ή οποιοσδήποτε άλλος συμβατός μεταγλωττιστής C++.
-- **Λειτουργικό Σύστημα**: Linux/Windows/MacOS.
-- **Περιβάλλον Ανάπτυξης**: Γραμμή Εντολών ή IDE.
-
----
-
-## Εγκατάσταση και Χρήση
-
-### 1. Κλωνοποίηση του Αποθετηρίου
-```bash
-git clone https://github.com/Object-Oriented-Programming-aka-Uniwa/Media-Player.git
-cd Media-Player
-```
-
-### 2. Μεταγλώττιση
-```bash
-g++ -o Media-Player App.cpp AppConst.cpp AppData.cpp Game.cpp MediaPlayer.cpp main.cpp
-```
-
-### 3. Εκτέλεση
-```bash
-./Media-Player
-```
+This project demonstrates OOP principles in C++ through a Media Player management system, emphasizing class relationships, encapsulation, exception handling, and operator overloading to manage applications, games, and manufacturers efficiently.
