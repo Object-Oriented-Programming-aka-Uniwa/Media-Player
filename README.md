@@ -102,7 +102,8 @@ This repository contains a **C++ project** implementing a **Media Player managem
 |    2.12 | `src/MediaPlayer.h`                      | Header file for MediaPlayer class                 |
 |       3 | `UML/`                                   | UML diagrams for the Media Player project         |
 |     3.1 | `UML/Classes.png`                        | Class diagram                                     |
-|       4 | `README.md`                              | Repository overview and usage instructions        |
+|       3 | `README.md`                              | Project documentation                             |
+|       4 | `INSTALL.md`                             | Usage instructions                                |
 
 ---
 
