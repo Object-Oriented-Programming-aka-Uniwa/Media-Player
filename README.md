@@ -8,6 +8,11 @@
   DEPARTMENT OF COMPUTER ENGINEERING AND INFORMATICS
 </p>
 
+<p align="center">
+  <a href="https://www.uniwa.gr" target="_blank">University of West Attica</a> ·
+  <a href="https://ice.uniwa.gr" target="_blank">Department of Computer Engineering and Informatics</a>
+</p>
+
 ---
 
 <p align="center">
@@ -43,7 +48,6 @@
   <a href="https://www.linkedin.com/in/cleo-sgouropoulou-51683525/" target="_blank">LinkedIn</a>
 </p>
 
-
 <p align="center">
   Co-supervisor: Georgios Meletiou, Laboratory Teaching Staff<br>
 </p>
@@ -54,13 +58,23 @@
 
 </hr>
 
+---
+
 <p align="center">
   Athens, August 2022
 </p>
 
 ---
 
-# Media Player Application in C++
+<p align="center">
+  <img src="https://www.computerhope.com/jargon/w/wmp.png" width="250"/>
+</p>
+
+---
+
+# README
+
+## Media Player
 
 This repository contains a **C++ project** implementing a **Media Player management system**, demonstrating object-oriented programming concepts, class relationships, and exception handling.
 
@@ -68,89 +82,61 @@ This repository contains a **C++ project** implementing a **Media Player managem
 
 ## Table of Contents
 
-| Section | Folder/File | Description |
-|------:|-------------|-------------|
-| 1 | `assign/` | Assignment material for the Media Player workshop |
-| 1.1 | `assign/Examination ac.year 2021-22.png` | Exercise description in English |
-| 1.2 | `assign/Εξέταση ακ.έτους 2021-22.png` | Exercise description in Greek |
-| 2 | `src/` | Source code files for Media Player project |
-| 2.1 | `src/main.cpp` | Main C++ program |
-| 2.2 | `src/App.cpp` | Implementation of App class |
-| 2.3 | `src/App.h` | Header file for App class |
-| 2.4 | `src/AppConst.cpp` | Implementation of App constants |
-| 2.5 | `src/AppConst.h` | Header file for App constants |
-| 2.6 | `src/AppData.cpp` | Implementation of App data management |
-| 2.7 | `src/AppData.h` | Header file for App data management |
-| 2.8 | `src/Companies.txt` | Text file with company data |
-| 2.9 | `src/Game.cpp` | Implementation of Game class |
-| 2.10 | `src/Game.h` | Header file for Game class |
-| 2.11 | `src/MediaPlayer.cpp` | Implementation of MediaPlayer class |
-| 2.12 | `src/MediaPlayer.h` | Header file for MediaPlayer class |
-| 3 | `UML/` | UML diagrams for the Media Player project |
-| 3.1 | `UML/Classes.png` | Class diagram |
-| 4 | `README.md` | Repository overview and usage instructions |
+| Section | Folder/File                              | Description                                       |
+| ------: | ---------------------------------------- | ------------------------------------------------- |
+|       1 | `assign/`                                | Assignment material for the Media Player workshop |
+|     1.1 | `assign/Examination ac.year 2021-22.png` | Exercise description in English                   |
+|     1.2 | `assign/Εξέταση ακ.έτους 2021-22.png`    | Exercise description in Greek                     |
+|       2 | `src/`                                   | Source code files for Media Player project        |
+|     2.1 | `src/main.cpp`                           | Main C++ program                                  |
+|     2.2 | `src/App.cpp`                            | Implementation of App class                       |
+|     2.3 | `src/App.h`                              | Header file for App class                         |
+|     2.4 | `src/AppConst.cpp`                       | Implementation of App constants                   |
+|     2.5 | `src/AppConst.h`                         | Header file for App constants                     |
+|     2.6 | `src/AppData.cpp`                        | Implementation of App data management             |
+|     2.7 | `src/AppData.h`                          | Header file for App data management               |
+|     2.8 | `src/Companies.txt`                      | Text file with company data                       |
+|     2.9 | `src/Game.cpp`                           | Implementation of Game class                      |
+|    2.10 | `src/Game.h`                             | Header file for Game class                        |
+|    2.11 | `src/MediaPlayer.cpp`                    | Implementation of MediaPlayer class               |
+|    2.12 | `src/MediaPlayer.h`                      | Header file for MediaPlayer class                 |
+|       3 | `UML/`                                   | UML diagrams for the Media Player project         |
+|     3.1 | `UML/Classes.png`                        | Class diagram                                     |
+|       4 | `README.md`                              | Repository overview and usage instructions        |
 
 ---
 
-## Project Overview
+## 1. Project Overview
 
 The system manages three primary entities:
 
-1. **Game** – Attributes: Code, Title, Game Category, Online status, Manufacturer  
-2. **Media Player Application** – Attributes: Code, Title, Supported Formats, Manufacturer  
-3. **App Manufacturer** – Attributes: Code, Title, Email  
+1. **Game** – Attributes: Code, Title, Game Category, Online status, Manufacturer
+2. **Media Player Application** – Attributes: Code, Title, Supported Formats, Manufacturer
+3. **App Manufacturer** – Attributes: Code, Title, Email
 
 Operations are performed via the `AppData` class, including:
 
-- Maintaining a list of all applications  
-- Maintaining a list of manufacturers  
-- Inserting or deleting applications  
-- Adding manufacturers  
-- Printing application details using `<<` operator  
-- Writing manufacturer details to a file  
-- Querying Media Player apps that support a specific format  
+- Maintaining a list of all applications
+- Maintaining a list of manufacturers
+- Inserting or deleting applications
+- Adding manufacturers
+- Printing application details using `<<` operator
+- Writing manufacturer details to a file
+- Querying Media Player apps that support a specific format
 
 ---
 
-## Key Features
+## 2. Key Features
 
-- **Encapsulation:** All attributes are private; no public attributes  
-- **Class Design:** Each class has a `Code` field (string) without using `std::string` for the field  
-- **Constructors:** Implemented for `Media Player Application` class  
-- **Exception Handling:** Manages errors in operations and memory handling  
-- **Stream Output:** Overloaded `<<` operator outputs readable application information  
-- **Data Management:** Supports insertion, deletion, and querying of applications and manufacturers  
-
----
-
-## Requirements
-
-- **C++ Compiler:** G++ or any standard C++ compiler  
-- **Operating System:** Linux / Windows / MacOS  
-- **Development Environment:** Command Line or IDE  
+- **Encapsulation:** All attributes are private; no public attributes
+- **Class Design:** Each class has a `Code` field (string) without using `std::string` for the field
+- **Constructors:** Implemented for `Media Player Application` class
+- **Exception Handling:** Manages errors in operations and memory handling
+- **Stream Output:** Overloaded `<<` operator outputs readable application information
+- **Data Management:** Supports insertion, deletion, and querying of applications and manufacturers
 
 ---
 
-## Installation & Usage
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Object-Oriented-Programming-aka-Uniwa/Media-Player.git
-cd Media-Player
-```
-
-### 2. Compile
-```bash
-g++ -o Media-Player App.cpp AppConst.cpp AppData.cpp Game.cpp MediaPlayer.cpp main.cpp
-```
-
-### 3. Run
-```bash
-./Media-Player
-```
-
----
-
-## Conclusion
+## 3. Conclusion
 
 This project demonstrates OOP principles in C++ through a Media Player management system, emphasizing class relationships, encapsulation, exception handling, and operator overloading to manage applications, games, and manufacturers efficiently.
